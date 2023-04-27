@@ -15,8 +15,8 @@ public class ApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(ApiApplication.class, args);
         Product product = new Product();
-        product.setName("Coca Cola");
-        product.setPrice(1.5f);
+        product.setName("Camiseta manga corta negra con logo (Nike)");
+        product.setPrice(24.99f);
         try {
             FileOutputStream fileOut = new FileOutputStream("serializable.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -42,7 +42,8 @@ public class ApiApplication {
             return;
         }
         System.out.println("Deserialized Product...");
-        System.out.println("Name: " + product.getName());
-        System.out.println("Price: " + product.getPrice());
+        System.out.println("_______________________");
+        System.out.println("Producto: " + product.getName());
+        System.out.println("Precio: " + product.getPrice());
     }
 }
